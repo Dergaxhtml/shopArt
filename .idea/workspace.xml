@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14a92966-7a61-4b8e-aaf6-355e64eedbc3" name="Default Changelist" comment="st">
+    <list default="true" id="14a92966-7a61-4b8e-aaf6-355e64eedbc3" name="Default Changelist" comment="hibernate">
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/error/ResponseEntityHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/error/UserAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/model/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/model/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/registration/OnRegistrationCompleteEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/service/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/util/GenericResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/validator/PasswordMatches.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/validator/PasswordMatchesValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/shopArt/shopArt/validator/UserPasswordValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,7 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rest_api_doctor" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -47,7 +61,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599299287967</updated>
-      <workItem from="1599299290420" duration="1332000" />
+      <workItem from="1599299290420" duration="2649000" />
+      <workItem from="1599401687071" duration="61000" />
+      <workItem from="1599692365905" duration="597000" />
+      <workItem from="1599859085884" duration="671000" />
+      <workItem from="1599876540192" duration="597000" />
     </task>
     <task id="LOCAL-00001" summary="st">
       <created>1599299979042</created>
@@ -56,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599299979042</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hibernate">
+      <created>1599300847420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599300847420</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -64,13 +89,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="st" />
-    <option name="LAST_COMMIT_MESSAGE" value="st" />
+    <MESSAGE value="hibernate" />
+    <option name="LAST_COMMIT_MESSAGE" value="hibernate" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1599300023061">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1599859163896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599300023061" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599859163896" />
     <state x="508" y="243" key="Github.ShareDialog" timestamp="1599299376444">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -79,9 +105,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="387" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599299397352" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1599299981181">
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1599300853739">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599299981181" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599300853739" />
   </component>
 </project>
