@@ -1,5 +1,6 @@
-package com.shopArt.shopArt.error;
+package com.shopArt.shopArt.error.handler;
 
+import com.shopArt.shopArt.error.UserAlreadyExistException;
 import com.shopArt.shopArt.util.GenericResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

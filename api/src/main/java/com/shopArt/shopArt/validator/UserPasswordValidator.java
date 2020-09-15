@@ -14,16 +14,20 @@ public class UserPasswordValidator implements Validator {
   @Override
   public void validate(Object o, Errors errors) {
     ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "valid.password");
-    ValidationUtils.rejectIfEmptyOrWhitespace(errors, "passwordConfirm", "valid.passwordConfirm");
+
 
     UserDto userDto = (UserDto) o;
-    if (!userDto.getPassword().equals(userDto.getPasswordConfirm())) {
-      errors.rejectValue("passwordConfirm", "valid.passwordConfirmDiff");
-    }
 
     String login = userDto.getEmail();
-    if (login.length() < 3 || login.length() > 25) {
+    if (login.length() < 3 && login.length() > 25 && isValidEmailAddress(login)) {
       errors.rejectValue("login", "valid.loginLength");
     }
+  }
+
+  public boolean isValidEmailAddress(String email) {
+    String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+    java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+    java.util.regex.Matcher m = p.matcher(email);
+    return m.matches();
   }
 }

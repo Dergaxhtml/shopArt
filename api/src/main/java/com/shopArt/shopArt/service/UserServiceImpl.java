@@ -26,13 +26,15 @@ public class UserServiceImpl implements UserService {
 
 @Override
   public User register(final UserDto userDto) {
-
+  if (userDto == null) {
+    throw new UserAlreadyExistException();
+  }
   if (emailExists(userDto.getEmail())) {
     throw new UserAlreadyExistException("There is an account with that email address: " + userDto.getEmail());
   }
   final User user = new User();
 
-  user.setEmail(userDto.getEmail());
+  user.setEmail(userDto.getEmail().toLowerCase());
 
   user.setPassword(passwordEncoder.encode(userDto.getPassword()));
   return userRepository.save(user);

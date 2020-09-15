@@ -47,12 +47,10 @@ public class UserController {
 
   @PostMapping("/register")
   public GenericResponse registerUserAccount(
-    @Validated final UserDto accountDto, HttpServletRequest request) {
-    LOGGER.debug("Registering user account with information: {}", accountDto);
-    User registered = userService.register(accountDto);
-    if (registered == null) {
-      throw new UserAlreadyExistException();
-    }
+    @Validated final UserDto userDto, HttpServletRequest request) {
+
+    User registered = userService.register(userDto);
+
     String appUrl = "http://" + request.getServerName() + ":" +
       request.getServerPort() + request.getContextPath();
 
