@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,7 +47,7 @@ public class UserController {
 
   @PostMapping("/register")
   public GenericResponse registerUserAccount(
-    @Valid final UserDto accountDto, HttpServletRequest request) {
+    @Validated final UserDto accountDto, HttpServletRequest request) {
     LOGGER.debug("Registering user account with information: {}", accountDto);
     User registered = userService.register(accountDto);
     if (registered == null) {
