@@ -4,6 +4,7 @@ import com.shopArt.shopArt.error.UserAlreadyExistException;
 import com.shopArt.shopArt.util.GenericResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.data.rest.core.RepositoryConstraintViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import java.util.stream.Collectors;
 
 @ControllerAdvice
 public class ResponseEntityHandler extends ResponseEntityExceptionHandler {
@@ -39,6 +42,20 @@ public class ResponseEntityHandler extends ResponseEntityExceptionHandler {
 
     return handleExceptionInternal(
       ex, bodyOfResponse, new HttpHeaders(), HttpStatus.CONFLICT, request);
+  }
+
+
+  @ExceptionHandler({ RepositoryConstraintViolationException.class })
+  public ResponseEntity<Object> handleAccessDeniedException(
+    Exception ex, WebRequest request) {
+    RepositoryConstraintViolationException nevEx =
+      (RepositoryConstraintViolationException) ex;
+
+    String errors = nevEx.getErrors().getAllErrors().stream()
+      .map(p -> p.toString()).collect(Collectors.joining("\n"));
+
+    return new ResponseEntity<Object>(errors, new HttpHeaders(),
+      HttpStatus.PARTIAL_CONTENT);
   }
 
 }

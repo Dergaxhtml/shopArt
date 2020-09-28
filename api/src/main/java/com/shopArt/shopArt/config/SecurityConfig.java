@@ -2,7 +2,7 @@ package com.shopArt.shopArt.config;
 
 //import com.shopArt.shopArt.validator.UserPasswordValidator;
 
-import com.shopArt.shopArt.validator.UserPasswordValidator;
+import com.shopArt.shopArt.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -37,7 +37,7 @@ public class SecurityConfig
 
   @Bean
   public Validator userPasswordValidator() {
-    return new UserPasswordValidator();
+    return new UserValidator();
   }
   @Override
   public void configure(final WebSecurity web) throws Exception {
@@ -48,6 +48,12 @@ public class SecurityConfig
   public AuthenticationManager authenticationManagerBean() throws Exception {
     return super.authenticationManagerBean();
   }
+
+  @Bean
+  public UserValidator beforeCreateWebsiteUserValidator() {
+    return new UserValidator();
+  }
+
   @Override
   protected void configure(final HttpSecurity http) throws Exception {
     http

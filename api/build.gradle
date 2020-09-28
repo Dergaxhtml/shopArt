@@ -49,6 +49,10 @@ dependencies {
 // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
 //	compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.0.RELEASE'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// https://mvnrepository.com/artifact/com.github.eirslett/frontend-maven-plugin
+	compile group: 'com.github.eirslett', name: 'frontend-maven-plugin', version: '1.10.0'
+
+
 }
 
 test {
