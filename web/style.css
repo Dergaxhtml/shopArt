@@ -1,0 +1,140 @@
+*,html,body
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    height: 3000px;
+}
+
+
+
+header
+{
+
+    height: 112px;
+    line-height: 112px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.secondary
+{
+    background-color: rosybrown;
+    box-shadow: 0px 0px 17px 0px;
+    transition: all 0.5s;
+}
+ul
+{
+    list-style: none;
+
+}
+
+li
+{
+
+    display: inline-block;
+}
+
+header nav{
+    float: right;
+}
+
+.logo
+{
+    margin-top: 30px;
+}
+
+header nav ul li a
+{
+    padding-right: 30px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.5s ease-in;
+
+}
+
+header nav ul li a:hover
+{
+    text-decoration: none;
+    color: red;
+}
+
+.page1
+{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('./image/backgound1.jpg');
+    /*background-color: dimgrey;*/
+    background-size: 100% 100%;
+}
+
+.slider,.slider ul,.slider ul li
+{
+    height: 710px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.slider h2
+{
+    font-weight: bold;
+    margin-top: 270px;
+}
+
+.slider span
+{
+    color: orange;
+}
+.slider a
+{
+    padding: 10px 40px;
+    margin-right: 10px;
+}
+
+.slider a.btn-half
+{
+    background-color: sandybrown;
+    color: white;
+    transition: 0.6s ease-in;
+}
+.slider a.btn-half:hover
+{
+    opacity: 0.7;
+}
+.slider a.btn-full
+{
+    background-color: orange;
+    color: white;
+    transition: 0.6s ease-in;
+}
+.slider a.btn-full:hover
+{
+    opacity: 0.7;
+}
+
+.page2
+{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('./image/background2.jpg');
+    background-size: 100% 100%;
+}
+.page3
+{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('./image/background3.png');
+    background-size: 100% 100%;
+}
+
+.slider i
+{
+    font-size: 30px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.register
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
